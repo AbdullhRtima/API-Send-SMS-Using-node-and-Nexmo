@@ -1,0 +1,19 @@
+{
+  "name": "smsmessage",
+  "version": "1.0.0",
+  "description": "this is an app to send massage by using nexmo api .... omer use !!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : " nodemon "
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "nexmo": "^2.3.2",
+    "socket.io": "^2.1.1"
+  },
+  "author": "Abdullah Abu Rtima",
+  "license": "ISC"
+}
