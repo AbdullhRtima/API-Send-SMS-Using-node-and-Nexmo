@@ -6,8 +6,8 @@ const socketio = require('socket.io');
 
 // nexmo init 
 const nexmo = new Nexmo ({
-    apiKey :'your key nexmo',
-    apiSecret :'your Secret code of nexmo'
+    apiKey :'ed994881',
+    apiSecret :'aZRsJPCUym0oqNb1'
 },{debug : true}) ;
 
 
@@ -32,13 +32,14 @@ app.get('/',(req,res) =>{
 // catch from post
 
 app.post('/',(req,res) =>{
- // res.send(req.body);
- // console.log(req.body);
+  res.send(req.body);
+  console.log(req.body);
  const number = req.body.number ;
  const text   = req.body.text ; 
+ const from   = req.body.from ;
  console.log(number);
  nexmo.message.sendSms( 
-    'your number ', number ,text , {type : 'unicode'},
+    from , number ,text , {type : 'unicode'},
     (err ,responseData) => {
         if (err){
             console.log(err);
